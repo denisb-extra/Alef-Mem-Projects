@@ -1,0 +1,123 @@
+$tab-w: 1200px;
+$mob-w: 920px;
+$small-w: 500px;
+
+@mixin border {
+	$red: random(256)-1;
+	$green: random(256)-1;
+	$blue: random(256)-1;
+ 	border: 1px solid red;
+ 	border-color: rgb($red, $green, $blue);
+}
+
+@mixin placeholder-color($color) {
+	&::-webkit-input-placeholder { /* WebKit browsers */
+	  color: $color;
+	}
+	&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	  color: $color;
+	}
+	&::-moz-placeholder { /* Mozilla Firefox 19+ */
+	  color: $color;
+	}
+	&:-ms-input-placeholder { /* Internet Explorer 10+ */
+	  color: $color;
+	}
+}
+
+/* Fonts */
+@font-face { 
+  	font-family: 'almoni-regular'; src: url('../fonts/almoni-tzar-aaa-400.ttf') format('truetype'); 
+} 
+@mixin f-r {
+	font-family: 'almoni-regular', "Arial"; font-weight: normal;
+}
+
+@font-face { 
+  	font-family: 'almoni-light'; src: url('../fonts/almoni-tzar-aaa-300.ttf') format('truetype'); 
+} 
+@mixin f-l {
+	font-family: 'almoni-light', "Arial" ; font-weight: lighter;
+}
+
+@font-face { 
+  	font-family: 'almoni-bold'; src: url('../fonts/almoni-tzar-aaa-700.ttf') format('truetype'); 
+} 
+@mixin f-b {
+	font-family: 'almoni-bold', "Arial"; font-weight: bold;
+}
+
+
+
+@font-face { 
+  	font-family: 'oswald-light'; src: url('../fonts/Oswald-Light.ttf') format('truetype'); 
+} 
+@mixin o-l {
+	font-family: 'oswald-light', "Arial" ; font-weight: lighter;
+}
+/* /Fonts */
+
+
+
+/* Global */
+html {
+	margin: 0 !important;
+}
+body {
+	position: relative;
+	margin: 0;
+  	padding: 20px;
+  	@media only screen and (max-width : $mob-w) {
+		padding: 10px;
+  	}
+}
+
+a {
+  text-decoration: none;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+	direction: rtl;
+}
+
+p {
+    margin: 0;
+}
+ul {
+	-webkit-padding-start: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+section {
+	width: 100%;
+	max-width: 1920px;
+	margin: auto;	
+	overflow: hidden;
+}
+
+.section-inner {
+	max-width: 1460px;
+	width: 100%;
+	margin: auto;
+}
+
+
+.content {
+	@include f-r;
+	font-size: 18px;
+	
+	ul {
+		list-style: circle;
+	}
+}
+
+
+
+
+@import 'owl/owl.carousel';
+/* --------------------- /Owl carousel ---------------------- */
+@import 'ham';
+@import 'index';
+@import 'inner';
