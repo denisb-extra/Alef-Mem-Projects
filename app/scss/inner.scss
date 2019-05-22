@@ -1,11 +1,18 @@
+$spacing: 70px;
+$spacing_mobile: 20px;
 /* ---------------------- Section top-inner ---------------------- */
 section.top-inner {
 	height: 294px;
-	background: #2b2868;
+	//background: #ec1e24;
 	position: relative;
 	overflow: hidden;
+
+	background: url(../images/inner/bg-top-inner.jpg) no-repeat;
+	background-position: center;
+	background-size: auto 100%;
+	background-size: cover;
 	&:before {
-		display: inline-block;
+		/*display: inline-block;
 		content: "";
 		background: url("../images/inner/bg-top-inner.jpg") no-repeat;
 		background-position:  right;
@@ -18,6 +25,21 @@ section.top-inner {
 		width: 1390px;
 		pointer-events: none;
 		z-index: 1;
+		*/
+		display: inline-block;
+		content: "";
+		
+		/* position: absolute; */
+		/* right: 0; */
+		/* top: 0; */
+		height: 294px;
+		width: 100%;
+		pointer-events: none;
+		z-index: 1;
+		
+		background-color: rgba(0,0,0,0.4)!important;
+
+
 		
 	}
 
@@ -26,7 +48,7 @@ section.top-inner {
 		top: 50%;
 		transform: translateY(-50%);
 		left: 20px;
-		right: 70%;
+		right: 20px;
 		z-index: 2;
 		//@include border;
 		.title {
@@ -86,9 +108,9 @@ section.breadcrumbs {
 	.line {
 		@include f-r;
 		font-size: 18px;
-		color: #3b3b3e;
+		color: #2b2b2d;
 		a, .breadcrumb_last {
-			color: #3b3b3e;
+			color: #2b2b2d;
 		}
 	}
 }
@@ -114,13 +136,13 @@ section.about-inner {
 		.title {
 			@include f-r;
 			font-size: 30px;
-			color: #3b3b3e;
+			color: #2b2b2d;
 		}
 
 		.content {
 			@include f-r;
 			font-size: 18px;
-			color: #3b3b3e;
+			color: #2b2b2d;
 			p {
 				margin-top: 25px;
 				line-height: 24px;
@@ -207,17 +229,20 @@ section.about-inner {
 
 /* ---------------------- Section text-top ---------------------- */
 section.text-top {
-	margin-top: 65px;
+	margin-top: $spacing;
+	@media only screen and (max-width : 920px) {
+		margin-top: $spacing_mobile;
+	}
 	.title {
 		@include f-r;
 		font-size: 30px;
-		color: #3b3b3e;
+		color: #2b2b2d;
 	}
 
 	.content {
 		@include f-r;
 		font-size: 18px;
-		color: #3b3b3e;
+		color: #2b2b2d;
 		margin-top: 25px;
 		p {
 			margin-top: 20px;
@@ -312,31 +337,31 @@ section.blog {
 				.title {
 					@include f-l;
 					font-size: 24px;
-					color: #262567;
+					color: #ec1e24;
 				}
 
 				.text {
 					@include f-r;
 					font-size: 18px;
-					color: #3b3b3e;
+					color: #2b2b2d;
 					margin-top: 25px;
 				}
 
 				.more {
 					@include f-r;
 					font-size: 18px;
-					color: #3b3b3e;
+					color: #2b2b2d;
 					margin-top: 25px;
 					span {
-						color: #262567;
+						color: #ec1e24;
 					}
 				}
 			}
 			cursor: pointer;
 			&:hover {
 				.content {
-					border-bottom: 2px solid #262567;
-					border-left: 2px solid #262567;
+					border-bottom: 2px solid #ec1e24;
+					border-left: 2px solid #ec1e24;
 				}
 				
 			}
@@ -363,8 +388,8 @@ section.blog {
 				.content {
 					display: block;
 					width: 100%;
-					border-bottom: 2px solid #262567;
-					border-left: 2px solid #262567;
+					border-bottom: 2px solid #ec1e24;
+					border-left: 2px solid #ec1e24;
 				}
 			}
 		}
@@ -393,7 +418,7 @@ section.contact {
 	.title {
 		@include f-r;
 		font-size: 30px;
-		color: #2b2868;
+		color: #ec1e24;
 	}
 
 	.part-contacts {
@@ -440,8 +465,8 @@ section.contact {
 				@include f-l;
 				font-size: 24px;
 			
-				color: #3b3b3e;
-				@include placeholder-color(#3b3b3e);
+				color: #2b2b2d;
+				@include placeholder-color(#2b2b2d);
 				border: none;
 				border-bottom: 2px solid #2b2b2d;
 				border-radius: 2px;
@@ -469,7 +494,7 @@ section.contact {
 				@include f-l;
 				font-size: 24px;
 				color: #fff;
-				background: #262567;
+				background: #ec1e24;
 				display: inline-block;
 				padding: 15px 75px;
 				cursor: pointer;
@@ -542,11 +567,14 @@ section.contact {
 
 /* ---------------------- Section project-top ---------------------- */
 section.project-top {
-	margin-top: 50px;
+	margin-top: $spacing;
+	@media only screen and (max-width : 920px) {
+		margin-top: $spacing_mobile;
+	}
 	.title {
 		@include f-r;
 		font-size: 30px;
-		color: #2b2868;
+		color: #ec1e24;
 	}
 	.section-inner {
 		white-space: nowrap;
@@ -584,7 +612,7 @@ section.project-top {
 				margin-top: 10px;
 				strong {
 					@include f-b;
-					color: #2b2868;
+					color: #ec1e24;
 				}
 			}
 		}
@@ -702,13 +730,13 @@ section.post {
 		.title {
 			@include f-r;
 			font-size: 30px;
-			color: #3b3b3e;
+			color: #2b2b2d;
 		}
 
 		.content {
 			@include f-r;
 			font-size: 18px;
-			color: #3b3b3e;
+			color: #2b2b2d;
 			p {
 				margin-top: 25px;
 				line-height: 24px;

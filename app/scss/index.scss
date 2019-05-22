@@ -1,10 +1,17 @@
 /* ----------------- Header -------------------- */
+
+
+$spacing: 70px;
+$spacing_mobile: 20px;
+
+
+//$spacing: 20px;
 header {
 	height: 120px;
 	margin: auto;
 	//position: fixed;
 	
-	z-index: 99;
+	z-index: 999;
 	transition: 0.5s;
 
 
@@ -37,7 +44,7 @@ header {
 	.tel-mobile {
 		height: 40px;
    		width: 40px;
-   		background: #262567;
+   		background: #ec1e24;
    		position: absolute;
    		left: 5px;
    		top: 2px;
@@ -95,7 +102,7 @@ header {
 		z-index: 2;
 		cursor: pointer;
 		.inner {
-			background: #2b2868;
+			background: #ec1e24;
 			height: 100%;
 			width: 100%;
 			text-align: center;
@@ -152,8 +159,11 @@ header {
 			display: none;
 		}
 		.tel {
-			right: auto;
-			left: 40px;
+			//right: auto;
+		//	left: 40px;
+			position: absolute;
+			right: 46%;
+			top: 20px;
 		}
 	}
 	@media only screen and (max-width : $mob-w) {
@@ -234,7 +244,7 @@ header {
 				transition: 0.5s;
 				@include f-l;
 				font-size: 30px;
-				color: #3b3b3e;
+				color: #2b2b2d;
 				
 				padding: 5px 15px;
 				padding-right: 0;
@@ -243,12 +253,12 @@ header {
 				border-bottom: 2px solid #fff;
 		
 				&:hover {
-					border-bottom: 2px solid #262567;
+					border-bottom: 2px solid #ec1e24;
 				}
 			}
 
 			&.current-menu-item > a {
-				border-bottom: 2px solid #262567;
+				border-bottom: 2px solid #ec1e24;
 			}
 
 			.sub-menu {
@@ -407,7 +417,7 @@ section.slider-top {
 		}
 	}
 
-	@media only screen and (max-width : 800px) {
+	@media only screen and (max-width : 920px) {
 		.slider {
 			.item {
 				overflow: hidden;
@@ -438,11 +448,15 @@ section.slider-top {
 
 /* ---------------------- Section about ---------------------- */
 section.about {
-	margin-top: 60px;
+	
+	margin-bottom: $spacing;
+	@media only screen and (max-width : 920px) {
+		margin-bottom: $spacing_mobile;
+	}
 	font-size: 0;
 	.section-inner {
 		display: flex;
-		align-items: center;
+		text-align: center;
 	}
 	.part-image {
 	
@@ -454,47 +468,57 @@ section.about {
 
 	.part-content {
 		
-		width: 59%;
-		padding-right: 95px;
+		//width: 59%;
+		//padding-right: 95px;
+		width: 100%;
+		padding-right: 0;
 		.title {
 			@include f-r;
 			font-size: 28px;
-			color: #3b3b3e;
-			margin-top: 35px;
+			color: #2b2b2d;
+			margin-top: 0px;
+			text-align: center;
 		}
 
 		.content {
 			margin-top: 25px;
 			@include f-r;
 			font-size: 18px;
-			color: #3b3b3e;
+			color: #2b2b2d;
 		}
 		.more {
 			@include f-r;
 			font-size: 18px;
 			color: #fff;
-			background: #262567;
+			background: #ec1e24;
 			padding: 13px 63px;
 			display: inline-block;
 			margin-top: 30px;
 			transition: 0.5s;
 			opacity: 1;
+			
 			&:hover {
 				opacity: 0.75
 			}
 		}
+		@media only screen and (max-width : 920px) {
+			.more {
+				width: 100%;
+				text-align: center;
+			}
+		}
 
 		.services {
-			margin-top: 20px;
+			margin-top: 0px;
 
 			.boxes {
-				margin-top: 20px;
+				margin-top: 45px;
 				display: flex;
 				flex-wrap: wrap;
-
-				.box {
-					width: 30%;
 				
+				.box {
+					width: 33.3%;
+					text-align: center;
 					padding: 33px;
 					padding-top: 15px;
 
@@ -505,7 +529,7 @@ section.about {
 					.title {
 						@include f-l;
 						font-size: 24px;
-						color: #262567;
+						color: #ec1e24;
 						display: inline-block;
 						position: relative;
 						background: #fff;
@@ -521,7 +545,7 @@ section.about {
 						position: absolute;
 						height: 2px;
 						width: 100px;
-						background: #262567;
+						background: #ec1e24;
 						right: 33px;
 					    top: 57px;
 					    width: 73%;
@@ -531,12 +555,12 @@ section.about {
 					.text {
 						@include f-r;
 						font-size: 18px;
-						color: #3b3b3e;
+						color: #2b2b2d;
 						margin-top: 15px;
 					}
 					&:hover {
-						border-bottom: 2px solid #262567;
-						border-left: 2px solid #262567;
+						border-bottom: 2px solid #ec1e24;
+						border-left: 2px solid #ec1e24;
 					}
 				}
 			}
@@ -549,7 +573,7 @@ section.about {
 				.boxes {
 					.box {
 						padding: 0;
-						margin-left: 5%;
+						margin-left: 0%;
 						padding-left: 1%;
 						&:last-child {
 							margin-left: 0;
@@ -563,7 +587,7 @@ section.about {
 		}
 	}
 
-	@media only screen and (max-width : 800px) {
+	@media only screen and (max-width : 920px) {
 		margin-top: 30px;
 		.section-inner {
 			flex-direction: column;
@@ -576,7 +600,7 @@ section.about {
 			width: 100%;
 			padding-right: 0px;
 			.services {
-				margin-top: 35px;
+				margin-top: 0px;
 				.boxes {
 					margin-top: 25px;
 					.box {
@@ -596,21 +620,32 @@ section.about {
 
 /* ---------------------- Section projects ---------------------- */
 section.projects {
-	margin-top: 70px;
+	margin-top: $spacing;
+	@media only screen and (max-width : 920px) {
+		margin-top: $spacing_mobile;
+	}
 	.boxes {
 		font-size: 0;
 		.box {
 			width: 24%;
+			height: 410px;
 			margin: 0.5%;
 			display: inline-block;
 			vertical-align: top;
 			position: relative;
+			overflow-y: hidden;
+    		overflow-x: hidden;
 			.image {
 				width: 100%;
 				filter: grayscale(100%);
 				transition: 0.5s;
+				height: 100%;
+   				 position: relative;
 				img {
 					width: 100%;
+					height: initial;
+					top: -50%;
+					position: absolute;
 				}
 			}
 			.caption {
@@ -663,7 +698,7 @@ section.projects {
 		}
 	}
 
-	@media only screen and (max-width : 800px) {
+	@media only screen and (max-width : 920px) {
 		margin-top: 35px;
 		.boxes {
 			.box {
@@ -685,7 +720,7 @@ section.projects {
 .plus {
 	height: 90px;
 	width: 90px;
-	background: #262567;
+	background: #ec1e24;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -715,18 +750,136 @@ section.projects {
 		height: 2px;
 	}
 }
-/* --------------------- /Section projects ---------------------- */	
 
+/* --------------------- /Section projects ---------------------- */	
+section.bg {
+	margin-bottom: $spacing;
+	@media only screen and (max-width : 920px) {
+		margin-bottom: $spacing_mobile;
+	}
+	.main-title {
+		@include f-r;
+		font-size: 80px;
+		color: #fff;
+		width: 100%;
+		z-index: 333;
+		text-align: center;
+		
+		@media only screen and (max-width : 920px) {
+			font-size: 36px;
+		}
+	}
+
+	.parallax {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+		background-image: url("http://amltd-group.s201.upress.link/wp-content/uploads/2018/10/MG_9101.jpg");
+		min-height: 680px; 
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.parallax:before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: calc(100% - 40px);
+		min-height: 680px; 
+		background-color: rgba(0,0,0,0.4)!important;
+		z-index: 10;
+		top: 20px;
+		left: 20px;
+	}
+
+
+
+
+	
+
+	
+
+
+
+
+
+	@media only screen and (max-width : 920px) {
+		.parallax {
+			min-height: 230px; 
+		}
+		
+		.parallax:before  {
+			min-height: 220px; 
+			width: calc(100% - 20px);
+			top: 20px;
+			left: 10px;
+		}
+	}
+
+}
 /* ---------------------- Section contact-bottom ---------------------- */
 section.contact-bottom {
-	margin-top: 100px;
-	padding-bottom: 65px;
+
+	
+	margin: $spacing auto $spacing auto;
+	@media only screen and (max-width : 920px) {
+		margin: $spacing_mobile auto $spacing_mobile auto;
+	}
 	.title {
 		@include f-r;
 		font-size: 30px;
-		color: #3b3b3e;
+		color: #fff;
+	}
+	.parallax {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-image: url("http://amltd-group.s201.upress.link/wp-content/uploads/2018/10/MG_9101.jpg");
+		min-height: 450px; 
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		
 	}
 
+	.parallax:before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: calc(100% - 40px);
+		min-height: 450px; 
+		background-color: rgba(0,0,0,0.4)!important;
+		z-index: 10;
+		
+	}
+	@media only screen and (max-width : 920px) {
+		.parallax {
+			min-height: 450px; 
+		}
+		
+		.parallax:before {
+			
+			width: calc(100% - 20px);
+			min-height: 450px; 
+			
+			
+		}
+	}
+	.form-div {
+		margin: 0px 200px;
+		z-index: 222;
+		text-align: center;
+	}
+	@media only screen and (max-width : 920px) {
+		.form-div {
+			margin: 0px 10px;
+		}
+	}
 	.wpcf7 {
 		
 		margin-top: 20px;
@@ -736,15 +889,18 @@ section.contact-bottom {
 			flex-wrap: wrap;	
 			justify-content: flex-end;
 			position: relative;
-			margin: -1%;
+			//margin: -1%;
+			text-align: center;
+		
+			justify-content: center;
 		}
 		input, select {
 			@include f-l;
 			font-size: 24px;
 		
-			color: #3b3b3e;
-			@include placeholder-color(#3b3b3e);
-			border: 2px solid #2b2b2d;
+			color: #2b2b2d;
+			@include placeholder-color(#2b2b2d);
+			border: 0px solid #2b2b2d;
 			border-radius: 2px;
 		
 			background: #fff;
@@ -770,18 +926,24 @@ section.contact-bottom {
 			@include f-l;
 			font-size: 24px;
 			color: #fff;
-			background: #262567;
+			background: #ec1e24;
 			display: inline-block;
 			padding: 15px 65px;
 			cursor: pointer;
 			transition: 0.5s;
 			position: relative;
-			width: auto;
+			width: 31.333%;
 			margin: 1%;
 			margin-top: 15px;
 			border: none;
 			transition: 0.5s;
 			opacity: 1;
+			height: 57px;
+			margin-top: 35px;
+
+
+
+
 			&:hover {
 				opacity: 0.75
 			}
@@ -827,8 +989,14 @@ section.contact-bottom {
 
 /* ---------------------- Section advantages ---------------------- */
 section.advantages {
-	padding: 50px 0;
-	border-top: 2px solid #c8c8c9;
+	//padding: 50px 0;
+	//border-top: 2px solid #c8c8c9;
+	margin-top: $spacing;
+	margin-bottom: $spacing;
+	@media only screen and (max-width : 920px) {
+		margin-top: $spacing_mobile;
+		margin-bottom: $spacing_mobile;
+	}
 
 	.boxes {
 		display: flex;
@@ -840,7 +1008,7 @@ section.advantages {
 			p {
 				@include f-l;
 				font-size: 24px;
-				color: #3b3b3e;
+				color: #2b2b2d;
 				position: relative;
 				padding-right: 40px;
 				&:before {
@@ -854,7 +1022,7 @@ section.advantages {
 		}
 	}
 
-	@media only screen and (max-width : 800px) {
+	@media only screen and (max-width : 920px) {
 		.boxes {
 			flex-wrap: wrap;
 			.box {
@@ -1023,7 +1191,7 @@ footer {
 		}
 		.footer-bottom {
 			position: static;
-			background: #262567;
+			background: #ec1e24;
 			display: block;
 			text-align: center;
 			border-top: 10px solid #fff;
